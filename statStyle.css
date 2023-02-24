@@ -1,0 +1,58 @@
+body{
+    background-image: radial-gradient(#f3ead8 70%, #d4b4a6);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1{
+    text-align:center;
+}
+
+button{
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+    width: 50%;
+    font-size:large;
+
+    transition-duration: 0.5s;
+    padding: 1rem;
+    border: none;
+    border-radius: 3px;
+    color:#fffcf5;
+    background-image: radial-gradient(circle at top,#9b5957 , #5f4a51);
+}
+
+button:hover{
+    box-shadow: 0 12px 16px 0 #1a000049, 0 17px 50px 0 #1a000049;
+}
+
+.basicStats{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    
+}    
+
+.statBlock{
+    display:inline;
+    margin: auto;
+}
+
+.otherStats{
+    display: flex;
+    flex-direction: row;
+}
+
+p, .otherStats{
+    text-align: center;
+}
+
+.totalsBlock{
+    margin-top: 1em;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
