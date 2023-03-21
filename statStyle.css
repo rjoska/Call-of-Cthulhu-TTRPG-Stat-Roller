@@ -22,6 +22,15 @@ button{
     background-image: radial-gradient(circle at top,#9b5957 , #5f4a51);
 }
 
+div button{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size:small;
+    width: 100%
+}
+
 button:hover{
     box-shadow: 0 12px 16px 0 #1a000049, 0 17px 50px 0 #1a000049;
 }
