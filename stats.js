@@ -16,6 +16,18 @@ function printNumber(number) {
 }
 
 var button = document.getElementById('button');
+var strBut = document.getElementById('strbutton');
+
+strBut.onclick = function() {
+  var strResult = dice.roll();
+  strDice1.innerHTML = strResult;
+  var strResult2 = dice.roll();
+  strDice2.innerHTML = strResult2;
+  var strResult3 = dice.roll();
+  strDice3.innerHTML = strResult3;
+  var strTotalJS = (strResult+strResult2+strResult3) * 5;
+  strTotal.innerHTML = strTotalJS;
+}
 
 button.onclick = function() {
   var strResult = dice.roll();
