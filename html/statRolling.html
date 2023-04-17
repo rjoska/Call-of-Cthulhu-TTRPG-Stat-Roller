@@ -2,135 +2,155 @@
 
 <head>
   <title>Stat Rolling</title>
-  <link rel="stylesheet" href="statStyle.css">
+  
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/statStyle.css">
 </head>
 
 <body>
+  <nav class="navbar sticky-top navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <span class="navbar-brand h1">Cthulhu Character Creator</span>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="Character Stats" href="#">Character Stats</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="characterSheet.html">Character Sheets</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
   <h1>Character Stats Generator</h1>
 
-  <div class="allStats">
-    <div class="basicStats">
-      <div class="statBlock">
+  <div class="allStats container">
+    <div class="basicStats row">
+      <div class="statBlock col-sm">
         <h3>Str</h3>
         <p id="strDice1"></p>
         <p id="strDice2"></p>
         <p id="strDice3"></p>
-		<button id="strbutton">Roll Str</button>
+		<button id="strbutton" class="btn btn-sm">Roll Str</button>
       </div>
-      <div class="statBlock">
+      <div class="statBlock col-sm">
         <h3>Con</h3>
         <p id="conDice1"></p>
         <p id="conDice2"></p>
         <p id="conDice3"></p>
-        <button id="conbutton">Roll Con</button>
+        <button id="conbutton" class="btn btn-sm">Roll Con</button>
       </div>
-      <div class="statBlock">
+      <div class="statBlock col-sm">
         <h3>Dex</h3>
         <p id="dexDice1"></p>
         <p id="dexDice2"></p>
         <p id="dexDice3"></p>
-        <button id="dexbutton">Roll Dex</button>
+        <button id="dexbutton" class="btn btn-sm">Roll Dex</button>
       </div>
-      <div class="statBlock">
+      <div class="statBlock col-sm">
         <h3>App</h3>
         <p id="appDice1"></p>
         <p id="appDice2"></p>
         <p id="appDice3"></p>
-        <button id="appbutton">Roll App</button>
+        <button id="appbutton" class="btn btn-sm">Roll App</button>
       </div>
-      <div class="statBlock">
+      <div class="statBlock col-sm">
         <h3>Pow</h3>
         <p id="powDice1"></p>
         <p id="powDice2"></p>
         <p id="powDice3"></p>
-        <button id="powbutton">Roll Pow</button>
+        <button id="powbutton" class="btn btn-sm">Roll Pow</button>
       </div>
-      <div class="statBlock">
+      <div class="statBlock col-sm">
         <h3>Luck</h3>
         <p id="luckDice1"></p>
         <p id="luckDice2"></p>
         <p id="luckDice3"></p>
-        <button id="luckbutton">Roll Pow</button>
+        <button id="luckbutton" class="btn btn-sm">Roll Pow</button>
       </div>
-      <div class="statBlock">
+      <div class="statBlock col-sm">
         <h3>Size</h3>
         <p id="sizeDice1"></p>
         <p id="sizeDice2"></p>
         <p>6</p>
-        <button id="sizebutton">Roll Size</button>
+        <button id="sizebutton" class="btn btn-sm">Roll Size</button>
       </div>
-      <div class="statBlock">
+      <div class="statBlock col-sm">
         <h3>Edu</h3>
         <p id="eduDice1"></p>
         <p id="eduDice2"></p>
         <p>6</p>
-        <button id="edubutton">Roll Edu</button>
+        <button id="edubutton" class="btn btn-sm">Roll Edu</button>
       </div>
-      <div class="statBlock">
+      <div class="statBlock col-sm">
         <h3>Int</h3>
         <p id="intDice1"></p>
         <p id="intDice2"></p>
         <p>6</p>
-        <button id="intbutton">Roll Int</button>
+        <button id="intbutton" class="btn btn-sm">Roll Int</button>
       </div>
     </div>
-    <div>
-      <div class="otherStats">
-        <div class="statBlock">
+    <div class="container">
+      <div class="otherStats row">
+        <div class="statBlock col-sm">
           <h3>HP</h3>
           <p id="hp"></p>
         </div>
-        <div class="statBlock">
+        <div class="statBlock col-sm">
           <h3>Sanity</h3>
           <p id="sanity"></p>
         </div>
-        <div class="statBlock">
+        <div class="statBlock col-sm">
           <h3>MP</h3>
           <p id="magicPoints"></p>
         </div>
-        <div class="statBlock">
+        <div class="statBlock col-sm">
           <h3>Dodge</h3>
           <p id="dodge"></p>
         </div>
-        <div class="statBlock">
+        <div class="statBlock col-sm">
           <h3>Personal Points</h3>
           <p id="personalPoints"></p>
         </div>
       </div>
-      <div class="totalsBlock">
-        <div class="total">
+      <div class="totalsBlock row">
+        <div class="total col-sm">
           <p>StrTotal: </p>
           <p id="strTotal"></p>
         </div>
-        <div class="total">
+        <div class="total col-sm">
           <p>ConTotal: </p>
           <p id="conTotal"></p>
         </div>
-        <div class="total">
+        <div class="total col-sm">
           <p>DexTotal: </p>
           <p id="dexTotal"></p>
         </div>
-        <div class="total">
+        <div class="total col-sm">
           <p>AppTotal: </p>
           <p id="appTotal"></p>
         </div>
-        <div class="total">
+        <div class="total col-sm">
           <p>PowTotal: </p>
           <p id="powTotal"></p>
         </div>
-        <div class="total">
+        <div class="total col-sm">
           <p>LuckTotal: </p>
           <p id="luckTotal"></p>
         </div>
-        <div class="total">
+        <div class="total col-sm">
           <p>SizeTotal: </p>
           <p id="sizeTotal"></p>
         </div>
-        <div class="total">
+        <div class="total col-sm">
           <p>EduTotal: </p>
           <p id="eduTotal"></p>
         </div>
-        <div class="total">
+        <div class="total col-sm">
           <p>IntTotal: </p>
           <p id="intTotal"></p>
         </div>
@@ -138,9 +158,13 @@
       </div>
     </div>
   </div>
-  <button id="button">Roll Stats</button>
+  <button id="button" class="btn btn-lg btn-block">Roll Stats</button>
   <script src="stats.js"></script>
   <script src="ui.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
