@@ -263,5 +263,5 @@ function updateHP(){
 
 
 function cookieTime () {
-	document.cookie = strn + "=" + strTotalJS + ";" + dexn + "=" + dexTotalJS + ";" + sizen + "=" + sizeTotalJS + ";" appn + "=" + appTotalJS + ";" conn + "=" + conTotalJS + ";" intn + "=" + intTotalJS + ";" pown + "=" + powTotalJS + ";" edun + "=" + eduTotalJS + ";" luckn + "=" + luckTotalJS + ";"
+	document.cookie = "name=cooky;" + strn + "=" + strTotalJS + ";" + dexn + "=" + dexTotalJS + ";" + sizen + "=" + sizeTotalJS + ";" appn + "=" + appTotalJS + ";" conn + "=" + conTotalJS + ";" intn + "=" + intTotalJS + ";" pown + "=" + powTotalJS + ";" edun + "=" + eduTotalJS + ";" luckn + "=" + luckTotalJS + ";"
 }
