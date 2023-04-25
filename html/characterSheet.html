@@ -1,31 +1,372 @@
 <html>
 
 <head>
-    <title>Character Sheet</title>
+  <title>Character Sheet</title>
 
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/statStyle.css">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/statStyle.css">
 </head>
 
 <body>
-    <nav class="navbar sticky-top navbar-expand-lg bg-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-          <span class="navbar-brand h1">Cthulhu Character Creator</span>
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="Character Stats" href="statRolling.html">Character Stats</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="Character Sheet" href="#">Character Sheets</a>
-            </li>
-          </ul>
+  <nav class="navbar sticky-top navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <span class="navbar-brand h1">Cthulhu Character Creator</span>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="Character Stats" href="statRolling.html">Character Stats</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="Character Sheet" href="#">Character Sheets</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <p>This is the character creation page</p>
+
+  <!--Top Bar Regarding Basic Character Info-->
+  <!--Idea: use progress bars to show health and other nonsense-->
+  <div class="col-3">
+    <div class="container-sm">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="charName">Name</span>
+        <input type="text" class="form-control" aria-label="Name" aria-describedby="Enter name">
+      </div>
+    </div>
+    <div class="container-sm">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="charAge">Age</span>
+        <input type="number" class="form-control" aria-label="Age" aria-describedby="Enter age">
+      </div>
+    </div>
+    <div class="container-sm">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="charResidence">Residence</span>
+        <input type="text" class="form-control" aria-label="Residence" aria-describedby="Enter residence">
+      </div>
+    </div>
+    <div class="container-sm p-3">
+      <select class="form-select" aria-label="Select Occupation">
+        <option selected>Select Occupation</option>
+        <option value="Professor">Professor</option>
+        <option value="Journalist">Journalist</option>
+        <option value="Occultist">Occultist</option>
+        <option value="Archeologist">Archeologist</option>
+      </select>
+    </div>
+  </div>
+
+  <!--Stat bar-->
+  <div class="container-sm text-center">
+    <div class="row align-items-center">
+      <div class="col">
+        <p>Strength</p>
+      </div>
+      <div class="col">
+        <p>Constitution</p>
+      </div>
+      <div class="col">
+        <p>Size</p>
+      </div>
+      <div class="col">
+        <p>Dexterity</p>
+      </div>
+      <div class="col">
+        <p>Apperance</p>
+      </div>
+      <div class="col">
+        <p>Education</p>
+      </div>
+      <div class="col">
+        <p>Intelligence</p>
+      </div>
+      <div class="col">
+        <p>Power</p>
+      </div>
+      <div class="col">
+        <p>Luck</p>
+      </div>
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item active"><a class="nav-link" data-toggle="tab" href="#skills">Skills</a></li>
+    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#backstory">Character Backstory</a></li>
+    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#assets">Gear, Assets, Money</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="skills" class="tab-pane fade in active">
+      <h3>Skills</h3>
+      <div class="container">
+        <div class="row row-cols-2">
+          <!--Column 1-->
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Accounting</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Anthropology</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Appraise</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Archaeology</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Art/Craft</label>
+          </div>
+          <!--Theres like three blank things in here what does this mean-->
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Charm</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Climb</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Credit Rating</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Cthulhu Mythos</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Disguise</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Dodge</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Drive Auto</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Elec Repair</label>
+          </div>
+
+          <!--Column 2-->
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Fast Talk</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Fighting</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Firearms (Handgun)</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Firearms (Rifle/Shotgun)</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">First Aid</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">History</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Intimidate</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Jump</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Language(Other)</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Language (Own)</label>
+          </div>
+
+          <!--Column 3-->
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Law</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Library Use</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Listen</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Locksmith</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Mech. Repair</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Medicine</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Natural World</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Navigate</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Occult</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Op. Hv. Machine</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Persuade</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Pilot</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Psychology</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Psychoanalysis</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Ride</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Language (Own)</label>
+          </div>
+          <!--Column 4-->
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Science</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Sleight of Hand</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Spot Hidden</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Stealth</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Survival</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Swim</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Throw</label>
+          </div>
+          <div class="col-4 form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Track</label>
+          </div>
         </div>
-      </nav>
-    <p>This is the character creation page</p>
-</body>
+      </div>
+
+    </div>
+    <div id="backstory" class="tab-pane fade">
+      <h3>Character Backstory</h3>
+      <p>Who are you?</p>
+      <div class="container">
+        <div class="row">
+          <!--Row 1-->
+          <div class="col-6 mb-3">
+            <label for="personalDescription" class="form-label">Personal Description</label>
+            <textarea class="form-control" id="personalDescription" rows="2"></textarea>
+          </div>
+          <div class="col-6 mb-3">
+            <label for="ideologyBeliefs" class="form-label">Ideology/Beliefs</label>
+            <textarea class="form-control" id="ideologyBeliefs" rows="2"></textarea>
+          </div>
+          <div class="col-6 mb-3">
+            <label for="significantPeople" class="form-label">Significant People</label>
+            <textarea class="form-control" id="significantPeople" rows="2"></textarea>
+          </div>
+          <div class="col-6 mb-3">
+            <label for="meaningfulLocations" class="form-label">Meaningful Locations</label>
+            <textarea class="form-control" id="meaningfulLocations" rows="2"></textarea>
+          </div>
+          <div class="col-6 mb-3">
+            <label for="treasuredPossessions" class="form-label">Treasured Possessions</label>
+            <textarea class="form-control" id="treasuredPossessions" rows="2"></textarea>
+          </div>
+          <!--Row 2-->
+          <div class="col-6 mb-3">
+            <label for="traits" class="form-label">Traits</label>
+            <textarea class="form-control" id="traits" rows="2"></textarea>
+          </div>
+          <div class="col-6 mb-3">
+            <label for="injuriesScars" class="form-label">Injuries/Scars</label>
+            <textarea class="form-control" id="injuriesScars" rows="2"></textarea>
+          </div>
+          <div class="col-6 mb-3">
+            <label for="phobiasManias" class="form-label">Phobias/Manias</label>
+            <textarea class="form-control" id="phobiasManias" rows="2"></textarea>
+          </div>
+          <div class="col-6 mb-3">
+            <label for="spellsArtifacts" class="form-label">Spells, Tomes, and Artifacts</label>
+            <textarea class="form-control" id="spellsArtifacts" rows="2"></textarea>
+          </div>
+          <div class="col-6 mb-3">
+            <label for="strangeEntities" class="form-label">Encounters with Strange Entities</label>
+            <textarea class="form-control" id="strangeEntities" rows="2"></textarea>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="assets" class="tab-pane fade">
+      <h3>Gear, Assets, Money</h3>
+      <p>What things do you own?</p>
+      <div class="container-md">
+        <button type="button" class="btn btn-dark">Add Asset</button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.bundle.js"></script>
 
 </html>
